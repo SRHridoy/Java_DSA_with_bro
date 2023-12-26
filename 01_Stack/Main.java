@@ -1,13 +1,3 @@
-# Java_DSA_with_bro
-
-> # Stack :
-
-Stack = LIFO data Structure. Last-in First-Out
-* Stores objects into a sort of "vertical tower"
-* push() to add to the top
-* pop() to remove from the top
-
-```java
 import java.util.Stack;
 
 public class Main{
@@ -59,11 +49,3 @@ public class Main{
         
     }
 }
-```
-
-### Uses of Stacks :
-1. Undo/redo features in text-editors
-2. Movig back/forward through browser history
-3. Backtracking algorithms(maze, file directories)
-4. Calling functions(call stack)
-
