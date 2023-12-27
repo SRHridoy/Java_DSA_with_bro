@@ -119,3 +119,39 @@ public class Main {
 2. Printer Queue(Print jobs should be completed in order)
 3. Used in Linedlists, PriorityQueues, Breadth-first Search(BFS)...
 
+> # Priority Queue :
+
+Priority Queue = A FIFO data structure that serves elements with the highest priorities first before elements with lowe priority.
+
+```java
+public static void main(String[] args) {
+    //Ascending Order Normally :
+        Queue<String> pQueue = new PriorityQueue<>();
+    //Decending Order :
+        Queue<String> pQueue2 = new PriorityQueue<>(Collections.reverseOrder());
+
+
+        pQueue.offer("A");
+        pQueue.offer("AB");
+        pQueue.offer("ABC");
+        pQueue.offer("ABCD");
+        pQueue.offer("ABCDE");
+        
+        pQueue2.offer("A");
+        pQueue2.offer("AB");
+        pQueue2.offer("ABC");
+        pQueue2.offer("ABCD");
+        pQueue2.offer("ABCDE");
+
+        while (!pQueue.isEmpty()) {
+            System.out.println(pQueue.poll());
+        }
+
+        while (!pQueue2.isEmpty()) {
+            System.out.println(pQueue2.poll());
+        }
+    }
+```
+
+> # LinkedLists(singly):
+
