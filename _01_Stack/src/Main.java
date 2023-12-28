@@ -5,7 +5,7 @@ public class Main{
     public static void main(String[] args) {
         Stack<String> stack = new Stack<String>();
         System.out.println(stack.empty());
-        
+
         stack.push("C");
         stack.push("C++");
         stack.push("Java");
@@ -20,12 +20,12 @@ public class Main{
         System.out.println(stack);
         stack.pop();
         System.out.println(stack);
-        
 
-        //java.util.EmptyStackException     
-                // stack.pop();
-                // System.out.println(stack);
-        
+
+        //java.util.EmptyStackException
+        // stack.pop();
+        // System.out.println(stack);
+
         //Jodi ekdom top element e jai ebong eta pop kori thokhn eta oi object return kore tai eta jodi amader korkar hoi taile amra eta assign kore rakhbo...
 
         //String myFavLang = stack.pop();
@@ -47,6 +47,6 @@ public class Main{
             stack.push("Objective C");
         }
 
-        
+
     }
 }

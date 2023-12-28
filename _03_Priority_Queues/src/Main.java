@@ -4,9 +4,9 @@ import java.util.Queue;
 
 public class Main {
     public static void main(String[] args) {
-    //Ascending Order Normally :
+        //Ascending Order Normally :
         Queue<String> pQueue = new PriorityQueue<>();
-    //Decending Order :
+        //Decending Order :
         Queue<String> pQueue2 = new PriorityQueue<>(Collections.reverseOrder());
 
 
@@ -15,7 +15,7 @@ public class Main {
         pQueue.offer("ABC");
         pQueue.offer("ABCD");
         pQueue.offer("ABCDE");
-        
+
         pQueue2.offer("A");
         pQueue2.offer("AB");
         pQueue2.offer("ABC");

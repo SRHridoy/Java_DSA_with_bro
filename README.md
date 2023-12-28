@@ -35,7 +35,7 @@ public class Main{
                 // stack.pop();
                 // System.out.println(stack);
         
-        //Jodi ekdom top element e jai ebong eta pop kori thokhn eta oi object return kore tai eta jodi amader korkar hoi taile amra eta assign kore rakhbo...
+        //Jodi ekdom top element e jai ebong eta pop kori thokhn eta oi object return kore tai eta jodi amader dorkar hoi taile amra eta assign kore rakhbo...
 
         //String myFavLang = stack.pop();
         //System.out.println(myFavLang);
@@ -117,7 +117,7 @@ public class Main {
 ## Where are queues useful?
 1. Keyboard Buffer(letters should appear on the screen in the order they're pressed)
 2. Printer Queue(Print jobs should be completed in order)
-3. Used in Linedlists, PriorityQueues, Breadth-first Search(BFS)...
+3. Used in Linkedlists, PriorityQueues, Breadth-first Search(BFS)...
 
 > # Priority Queue :
 

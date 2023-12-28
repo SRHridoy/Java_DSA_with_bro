@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Java DSA.iml" filepath="$PROJECT_DIR$/Java DSA.iml" />
+      <module fileurl="file://$PROJECT_DIR$/_01_Stack/_01_Stack.iml" filepath="$PROJECT_DIR$/_01_Stack/_01_Stack.iml" />
+      <module fileurl="file://$PROJECT_DIR$/_02_Queue/_02_Queue.iml" filepath="$PROJECT_DIR$/_02_Queue/_02_Queue.iml" />
+      <module fileurl="file://$PROJECT_DIR$/_03_Priority_Queues/_03_Priority_Queues.iml" filepath="$PROJECT_DIR$/_03_Priority_Queues/_03_Priority_Queues.iml" />
+      <module fileurl="file://$PROJECT_DIR$/_04_LinkedList/_04_LinkedList.iml" filepath="$PROJECT_DIR$/_04_LinkedList/_04_LinkedList.iml" />
+      <module fileurl="file://$PROJECT_DIR$/_05Dynamic_Arrays/_05Dynamic_Arrays.iml" filepath="$PROJECT_DIR$/_05Dynamic_Arrays/_05Dynamic_Arrays.iml" />
+    </modules>
+  </component>
+</project>
