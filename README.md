@@ -410,8 +410,106 @@ LinkedList<Integer> linkedList = new LinkedList<Integer>();
         System.out.println("Arraylist :\t" + elapsedTime + " ns");
 ```
 
+> # Big O notaion :
+> "How code slows as data grows."
+
+1. Describes the performance of an algorithm as the amount of data increases
+2. Machine independent(no of steps of completion)
+3. Ignore smaller operations O(n + 1) -> O(n)
+
+O(n) -> Linear time 
+```java
+int addU(int n){
+    int sum = 0;
+    for(int i = 0; i <= n; i++){
+        sum += i;
+    }
+    return  sum;
+}
+```
+
+O(1) -> Constant time 
+```java
+int addUp(int n){
+    int sum = n * (n + 1) / 2;
+    return  sum;
+}
+```
+![img.png](img.png)
+
+> # Searching : 
+
+## Linear Search :
+linear search = Iterate through a collection one element at a time
+                runtime complexity : O(n)
+
+Disadvantages : 
+            Slow for large data sets
+Advantages : 
+            Fast for searches of small to medium data sets
+            Doesn't need to be sorted
+            Useful for data structures that don't have random access(Linked List)
+
+```java
+private static int linearSearch(int[] array, int value) {
+        for (int i = 0; i < array.length; i++){
+            if(array[i]==value){
+                return i;
+            }
+        }
+        return -1;
+    }
+```
+
+## Binary Search :
+Searching algorithm that finds the position of a target value within a sorted array. Half of the array is eliminated during each "step"---> O(logN)
 
 
+```java
+    private static int binarySearch(int[] array, int target) {
+        int start = 0;
+        int end = array.length - 1;
+        while (start<=end){
+            int mid = start + (end - start)/2;
+            int value = array[mid];
+            System.out.println("middle : " +mid);//step counting
+            if(value<target) start = mid + 1;
+            else if (value>target) end = mid - 1;
+            else return  mid;//Found
+        }
+        return -1;//not found
+    }
+```
+
+## Interpolation Search :
+Interpolation search = improvement over binary search best used for "uniformly" distributed data "guesses" where a value might be based on calculated probe results if probe is incorrect, we narrow the search and try again...
+
+Average case : O(log(log(n)))
+
+Worst case : O(n)[values increase exponentially]
+
+```java
+    private static int interpolationSearch(int[] array, int target) {
+        int start = 0;
+        int end = array.length - 1;
+        while (target >= array[start] && target <= array[end] && start <= end){
+            int probe = start + (end - start) * (target - array[start])/(array[end] - array[start]);
+
+            System.out.println("probe : " + probe);
+
+            if(array[probe] == target){
+                return probe;
+            }
+            else if(array[probe] < target){
+                start = probe + 1;
+            }else {
+                end = probe - 1 ;
+            }
+        }
+        return -1;
+    }
+```
+![img_1.png](img_1.png)
 
 
 
