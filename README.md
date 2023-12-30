@@ -121,7 +121,7 @@ public class Main {
 
 > # Priority Queue :
 
-Priority Queue = A FIFO data structure that serves elements with the highest priorities first before elements with lowe priority.
+Priority Queue = A FIFO data structure that serves elements with the highest priorities first before elements with lower priority.
 
 ```java
 public static void main(String[] args) {
@@ -252,7 +252,7 @@ public static void main(String[] args) {
 Advantages :
 1. Random access of elements O(1)
 2. Good locality of reference and data cache utilization
-3. East to insert/delete at the end
+3. Easy to insert/delete at the end
 
 Disadvantages :
 1. Wastes more memory
@@ -445,9 +445,10 @@ linear search = Iterate through a collection one element at a time
 
 Disadvantages : 
             Slow for large data sets
+
 Advantages : 
-            Fast for searches of small to medium data sets
-            Doesn't need to be sorted
+            Fast for searches of small to medium data sets...
+            Doesn't need to be sorted...
             Useful for data structures that don't have random access(Linked List)
 
 ```java
@@ -510,6 +511,113 @@ Worst case : O(n)[values increase exponentially]
     }
 ```
 ![img_1.png](img_1.png)
+
+> # Sorting Algorithm :
+
+## Bubble sort:
+Bubble sort = pairs of adjacent elements are compared, and the elements swapped if they are not in order.
+1. Qradratic time O(n^2)
+2. Small data set = okay-ish
+3. Large data set = bad
+
+```java
+    private static void bubbleSort(int[] array) {
+        for (int i = 0; i < array.length - 1; i++) {
+            for (int j = 0; j < array.length - i - 1; j++) {
+                if(array[j]>array[j+1]){
+                    int temp = array[j];
+                    array[j] = array[j+1];
+                    array[j+1] = temp;
+                }
+            }
+        }
+    }
+```
+
+## Selection sort:
+Selection sort = search through an array and keep track of the minimum value during each iteration. At the end of each iteration, we swap variables.
+
+1. Quadratic time O(n^2)
+2. Small data set = okay
+3. Large data set = Bad
+
+```java
+    private static void selectionSort(int[] array) {
+        for (int i = 0; i < array.length-1; i++) {
+            int min = i;
+            for (int j = i+1; j < array.length; j++) {
+                if(array[j]<array[min]){
+                    min = j;
+                }
+            }
+            int temp = array[i];
+            array[i] = array[min];
+            array[min] = temp;
+        }
+    }
+```
+
+## Insertion Sort :
+Insertion sort = after comparing elements to the left, shift elements to the right to make room to insert a value...
+
+1. Quadratic time O(n^2)
+2. Small data set = decent
+3. large data set = BAD
+4. Fewer steps than Bubble Sort
+5. Best is O(n) compared to Selection Sort O(n^2
+
+```java
+    private static void insertionSort(int[] array) {
+        for (int i = 1; i < array.length; i++) {
+            int temp = array[i];
+            int j = i-1;
+
+            while (j>=0 && array[j] > temp){
+                array[j+1] = array[j];
+                j--;
+            }
+            array[j+1] = temp;
+        }
+    }
+```
+
+## Recursion :
+Recursion = when a thing is defined in terms of itself.
+* Apply the result of a procedure, to a procedure.
+* A recursive method calls itself. Can be a substitute for iteration.
+* Divide a problem into sub-problems of the same type as the original.
+* Commonly used with advanced sorting algorithms and navigating trees.
+
+Advantages :
+1. Easier to read/write
+2. Easier to debug
+
+Disadvantages :
+1. Sometimes slower
+2. Use more memory
+
+### Factorial :
+```java
+    private static int factorial(int i) {
+        if(i<1) return 1;
+        return i*factorial(i-1);
+    }
+```
+
+### Power : 
+```java
+    private static int power(int base, int exponent) {
+        if(exponent<1) return 1;//base case
+        return base * power(base, exponent - 1);//recursive case
+    }
+```
+
+
+
+
+
+
+
 
 
 

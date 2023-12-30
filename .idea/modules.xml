@@ -9,6 +9,7 @@
       <module fileurl="file://$PROJECT_DIR$/_04_LinkedList/_04_LinkedList.iml" filepath="$PROJECT_DIR$/_04_LinkedList/_04_LinkedList.iml" />
       <module fileurl="file://$PROJECT_DIR$/_05Dynamic_Arrays/_05Dynamic_Arrays.iml" filepath="$PROJECT_DIR$/_05Dynamic_Arrays/_05Dynamic_Arrays.iml" />
       <module fileurl="file://$PROJECT_DIR$/_06_Searching/_06_Searching.iml" filepath="$PROJECT_DIR$/_06_Searching/_06_Searching.iml" />
+      <module fileurl="file://$PROJECT_DIR$/_07_Sorting_Algorithm/_07_Sorting_Algorithm.iml" filepath="$PROJECT_DIR$/_07_Sorting_Algorithm/_07_Sorting_Algorithm.iml" />
     </modules>
   </component>
 </project>
