@@ -179,7 +179,7 @@ LinkedList = stores Nodes in 2 parts (data + address)
 
 ### Advantages :
 1. Dynamic Data Structure (allocates needed while running)
-2. Insertion and Deletion of Nodes is east. O(1)
+2. Insertion and Deletion of Nodes is easy. O(1)
 3. No/Low memory waste
 
 ### Disadvantages : 
@@ -612,6 +612,62 @@ Disadvantages :
     }
 ```
 
+## Merge sort :
+Merge sort = recursively divide array in 2, sort, re-combine
+* run-time complexity = O(nlog(n))
+* space complexity = O(n)
+```java
+    private static void mergeSort(int[] array) {
+        int length = array.length;
+        if(length<=1) return;//baseCase
+
+        int middle = length/2;
+        int[] leftArray = new int[middle];
+        int[] rightArray = new int[length-middle];
+
+        for (int i = 0, j = 0; i < length; i++) {
+            if (i<middle){
+                leftArray[i] = array[i];
+            }else{
+                rightArray[j] = array[i];
+                j++;
+            }
+        }
+
+        mergeSort(leftArray);
+        mergeSort(rightArray);
+        merge(leftArray,rightArray,array);
+    }
+
+    private static void merge(int[] leftArray, int[] rightArray, int[] array) {
+        int leftSize = leftArray.length;
+        int rightSize = rightArray.length;
+
+        int i = 0,l = 0,r = 0;
+
+        while(l<leftSize && r<rightSize){
+            if(leftArray[l]<rightArray[r]){
+                array[i] = leftArray[l];
+                i++;
+                l++;
+            }else{
+                array[i] = rightArray[r];
+                i++;
+                r++;
+            }
+        }
+        while(l<leftSize){
+            array[i] = leftArray[l];
+            i++;
+            l++;
+        }
+        while (r<rightSize){
+            array[i] = rightArray[r];
+            i++;
+            r++;
+        }
+    }
+```
 
 
 
