@@ -669,6 +669,89 @@ Merge sort = recursively divide array in 2, sort, re-combine
     }
 ```
 
+## Quick Sort :
+Quick sort = moves smaller elements to  left of pivot.
+* Recursively divide an array in 2 partitions
+* Run-time complexity = Best case O(nlog(n))
+* Worst case O(n^2) if already sorted
+* Space complexity = O(log(n)) due to recursion
+
+
+```java
+    private static void quickSort(int[] array, int start, int end) {
+        if(end<=start) return;//base case
+
+        int pivot = partition(array,start,end);
+        quickSort(array,start,pivot-1);
+        quickSort(array,pivot+1,end);
+
+    }
+
+    private static int partition(int[] array, int start, int end) {
+        int pivot = array[end];
+        int i = start - 1;
+
+        for(int j = start; j < end; j++){
+            if(array[j]<pivot){
+                i++;
+                int temp = array[j];
+                array[j] = array[i];
+                array[i] = temp;
+            }
+        }
+        i++;
+        int temp = array[i];
+        array[i] = array[end];
+        array[end] = temp;
+        return i;//that's the right pivot...
+    }
+```
+
+> ## Hash Table :
+
+Hashtable = A data structure that stores unique keys to values ex.<Integer, String>
+* Each key/value pair is known as an Entry
+* Fast insertion, look up, deletion of key/value pairs
+* Not ideal for small data sets, great with large data sets
+* Hashing = takes a key and computes an integer (formula will vary based on key and data type)
+* In a Hashtable, we use the hash % capacity to calculate an index number
+* key.hashCode() % capacity = index
+* Bucket = an idexed storage location for one or more Entries...Can store multiple Entries in case of a collision(linked similarly a LinkedList)
+* Collision = hash function generates the same index for more than one kew less collisions = more efficiency
+* Runtime complexity :
+1. Best case O(1)
+2. Worst Case O(n)
+
+```java
+import java.util.Hashtable;
+
+public class HashTable {
+    public static void main(String[] args) {
+        Hashtable<Integer, String> hashtable = new Hashtable<>(10);
+        hashtable.put(2102002, "Hridoy");
+        hashtable.put(2102003, "Khaled");
+        hashtable.put(2102004, "Dipu");
+        hashtable.put(2102005, "Arman");
+
+        //hashtable.remove(2102004);
+        for (Integer key : hashtable.keySet()) {
+            System.out.println(key.hashCode() % 10 + "\t" + key + "\t" + hashtable.get(key));//key Integer type hoile hash hashCode hobe int type er...
+        }
+        Hashtable<String, String> hashtableS = new Hashtable<>(10);
+        hashtableS.put("2102002", "Hridoy");
+        hashtableS.put("2102003", "Khaled");
+        hashtableS.put("2102004", "Dipu");
+        hashtableS.put("2102005", "Arman");
+
+        //hashtable.remove(2102004);
+        for (String key : hashtableS.keySet()) {
+            System.out.println(key.hashCode() + "\t" + key + "\t" + hashtableS.get(key));//String key er jonne oonno formula diye hashCode hobe...
+        }
+    }
+}
+```
+
+![img_2.png](img_2.png)
 
 
 

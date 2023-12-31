@@ -10,6 +10,7 @@
       <module fileurl="file://$PROJECT_DIR$/_05Dynamic_Arrays/_05Dynamic_Arrays.iml" filepath="$PROJECT_DIR$/_05Dynamic_Arrays/_05Dynamic_Arrays.iml" />
       <module fileurl="file://$PROJECT_DIR$/_06_Searching/_06_Searching.iml" filepath="$PROJECT_DIR$/_06_Searching/_06_Searching.iml" />
       <module fileurl="file://$PROJECT_DIR$/_07_Sorting_Algorithm/_07_Sorting_Algorithm.iml" filepath="$PROJECT_DIR$/_07_Sorting_Algorithm/_07_Sorting_Algorithm.iml" />
+      <module fileurl="file://$PROJECT_DIR$/_08_Hash_table/_08_Hash_table.iml" filepath="$PROJECT_DIR$/_08_Hash_table/_08_Hash_table.iml" />
     </modules>
   </component>
 </project>
